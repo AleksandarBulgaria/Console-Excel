@@ -12,16 +12,17 @@ public class ExpressionParser {
         LinkedList<BigDecimal> leaves = new LinkedList<>();
         LinkedList<Operation> innerNs = new LinkedList<>();
 
-        System.out.println("\nLeaves:\n| ");
+        System.out.println("\nLeaves:");
         for (int i = 0; i < input.length; i += 2) {
             leaves.add(BigDecimal.valueOf(Double.valueOf(input[i])).setScale(2, RoundingMode.HALF_UP));
             System.out.print(leaves.getLast() + " | ");
         }
-        System.out.println("\nOperations:\n| ");
+        System.out.println("\n\nNodes:");
         for (int i = 1; i < input.length; i += 2) {
             innerNs.add(Operation.fromString(input[i]));
             System.out.print(innerNs.getLast() + " | ");
         }
+        System.out.println("\n");
         return expressionTree;
     }
 
