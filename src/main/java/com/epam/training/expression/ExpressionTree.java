@@ -13,4 +13,20 @@ public class ExpressionTree {
     public Node getRoot() {
         return this.root;
     }
+
+    public void replaceRootMoveLeft(Node n) {
+
+    }
+
+    public void replaceRootMoveRight(Node n) {
+
+    }
+
+    public void addToRootLeft(Node n) {
+
+    }
+
+    public void addToRootRight(Node n) {
+
+    }
 }

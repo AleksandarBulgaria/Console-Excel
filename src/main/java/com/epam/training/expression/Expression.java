@@ -1,8 +1,11 @@
 package com.epam.training.expression;
 
+import java.math.BigDecimal;
+
 public class Expression implements ExpressionInterface {
 
-    private Double value;
+    private BigDecimal value;
+    private String expression;
     private ExpressionTree expTree;
 
     @Override

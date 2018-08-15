@@ -1,5 +1,7 @@
 package com.epam.training;
 
+import com.epam.training.expression.ExpressionParser;
+
 import java.util.Scanner;
 
 public class SpreadsheetApplication {
@@ -7,7 +9,7 @@ public class SpreadsheetApplication {
     public static void main(String[] args) {
         System.out.println("Welcome to SpreadsheetApplication!");
         String input = sc.nextLine();
-        System.out.println("not ready yet!");
+        ExpressionParser.parse(input);
 
 
 

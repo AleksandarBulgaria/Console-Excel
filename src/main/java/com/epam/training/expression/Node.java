@@ -26,23 +26,7 @@ final class Node {
 
     Node(String s) {
         if (s.matches(OPERATION_PATTERN)) {
-            switch (s) {
-                case "+":
-                    op = Operation.Addition;
-                    break;
-                case "-":
-                    op = Operation.Subtraction;
-                    break;
-                case "/":
-                    op = Operation.Division;
-                    break;
-                case "*":
-                    op = Operation.Multiplication;
-                    break;
-                case "^":
-                    op = Operation.Exponentiation;
-                    break;
-            }
+            op = Operation.fromString(s);
         } else if (s.matches(DECIMAL_PATTERN)) {
             value = BigDecimal
                     .valueOf(Double.valueOf(s))

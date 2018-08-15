@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class NodeTest {
 
-
     private static final Node root = new Node("^");
     private static final Node left = new Node("4");
     private static final Node right = new Node("2");
@@ -84,7 +83,9 @@ class NodeTest {
         Node rightNode = new Node("0.75");
         rootNode.setLeft(leftNode);
         rootNode.setRight(rightNode);
+
         rootNode.calculateValue();
+
         assertEquals(
                 BigDecimal.valueOf(6.0).setScale(2, RoundingMode.HALF_UP),
                 rootNode.getValue()

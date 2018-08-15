@@ -1,5 +1,7 @@
 package com.epam.training.expression;
 
+import java.security.InvalidParameterException;
+
 public enum Operation {
 
     Division("/"),
@@ -14,4 +16,20 @@ public enum Operation {
         operand = s;
     }
 
+    public static Operation fromString(String s) throws InvalidParameterException {
+        switch (s) {
+            case "+":
+                return Operation.Addition;
+            case "-":
+                return Operation.Subtraction;
+            case "/":
+                return Operation.Division;
+            case "*":
+                return Operation.Multiplication;
+            case "^":
+                return Operation.Exponentiation;
+            default:
+                throw new InvalidParameterException();
+        }
+    }
 }
