@@ -2,7 +2,7 @@ package com.epam.training.expression;
 
 public class Expression implements ExpressionInterface {
 
-    private Float value;
+    private Double value;
     private ExpressionTree expTree;
 
     @Override

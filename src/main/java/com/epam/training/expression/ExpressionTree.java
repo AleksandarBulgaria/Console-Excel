@@ -1,12 +1,16 @@
 package com.epam.training.expression;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ExpressionTree {
-    private ArrayList<Node> nodes = new ArrayList<>();
-    private final class Node{
-        Node left = null;
-        Node right = null;
-        Node parent = null;
+    private HashSet<Node> nodes = new HashSet<>();
+    private Node root;
+
+    ExpressionTree(Node node) {
+        root = node;
+    }
+
+    public Node getRoot() {
+        return this.root;
     }
 }
