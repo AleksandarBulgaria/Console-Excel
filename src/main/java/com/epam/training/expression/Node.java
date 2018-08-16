@@ -8,7 +8,7 @@ import java.math.RoundingMode;
  * @version 0.01rc
  * @since 15-Aug-2018
  */
-final class Node {
+class Node {
 
 /*
     private boolean isRoot;
